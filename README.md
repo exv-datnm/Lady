@@ -34,7 +34,7 @@ Swift 3.0
 ### CocoaPods
 
 ```ruby
-pod 'Lady', '~> 0.4'
+pod 'Lady', :git => 'https://github.com/exv-datnm/Lady.git'
 ```
 ### Carthage
 
