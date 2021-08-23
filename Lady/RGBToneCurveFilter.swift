@@ -129,7 +129,7 @@ class RGBToneCurveFilter {
 
         let data = Data(bytesNoCopy: UnsafeMutablePointer<UInt8>(toneCurveBytes), count: length, deallocator: .free)
 
-        toneCurveTexture = CIImage(bitmapData: data, bytesPerRow: length, size: CGSize(width: 256, height: 1), format: kCIFormatBGRA8, colorSpace: nil)
+        toneCurveTexture = CIImage(bitmapData: data, bytesPerRow: length, size: CGSize(width: 256, height: 1), format: CIFormat.BGRA8, colorSpace: nil)
     }
 
     func setDefaults() {
@@ -353,7 +353,7 @@ extension RGBToneCurveFilter {
 private extension UnsafeMutablePointer {
     static func calloc<T>(_ count: Int, initialValue: T) -> UnsafeMutablePointer<T> {
         let ptr = UnsafeMutablePointer<T>.allocate(capacity: count)
-        ptr.initialize(to: initialValue, count: count)
+        ptr.initialize(repeating: initialValue, count: count)
         return ptr
     }
 }

@@ -34,7 +34,7 @@ open class HighPassSkinSmoothingFilter {
         }
     }
 
-    open static let defaultInputToneCurveControlPoints = [CIVector(x: 0.0, y: 0.0), CIVector(x: 120/255.0, y: 146/255.0), CIVector(x: 1.0, y: 1.0)]
+    public static let defaultInputToneCurveControlPoints = [CIVector(x: 0.0, y: 0.0), CIVector(x: 120/255.0, y: 146/255.0), CIVector(x: 1.0, y: 1.0)]
 
     /**
      A number value that controls the sharpness factor of the final `Sharpen` step. The sharpness value is calculated as `inputAmount * inputSharpnessFactor`. The default value for this parameter is 0.6.
